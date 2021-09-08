@@ -1,52 +1,12 @@
-[09:47:20.327] [18] [Error] [Eco] Failed to load server, Exception was Exception: ArgumentNullException
-Message:Value cannot be null. (Parameter 'key')
-Source:System.Private.CoreLib
-
-System.ArgumentNullException: Value cannot be null. (Parameter 'key')
-   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
-   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
-   at Eco.Gameplay.Items.RecipeFamily.Initialize()
-   at Eco.ModKit.ModDataSync..ctor()
-   at Eco.ModKit.ModKitPlugin.<>c__DisplayClass31_0.<LoadModsData>b__0()
-   at System.Threading.Tasks.Task.InnerInvoke()
-   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
---- End of stack trace from previous location where exception was thrown ---
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
-   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
-Outer Exceptions:
-One or more errors occurred. (Value cannot be null. (Parameter 'key'))
- 
-[09:47:20.346] [1] [Error] [Eco] Unhandled errorSystem.AggregateException: One or more errors occurred. (Value cannot be null. (Parameter 'key'))
-   at System.Threading.Tasks.Task.ThrowIfExceptional(Boolean includeTaskCanceledExceptions)
-   at System.Threading.Tasks.Task.Wait(Int32 millisecondsTimeout, CancellationToken cancellationToken)
-   at System.Threading.Tasks.Task.Wait()
-   at Eco.Server.PluginManager.<>c__DisplayClass31_0.<AddPluginsAsync>b__0()
-   at System.Threading.Tasks.Task.InnerInvoke()
-   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
---- End of stack trace from previous location where exception was thrown ---
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
-   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
---- End of stack trace from previous location where exception was thrown ---
-   at Eco.Server.PluginManager.AddPluginsAsync(StartupInfo startupInfo)
-   at Eco.Server.PluginManager.PostCreateAsync(StartupInfo startupInfo)
-   at Eco.Server.Startup.StartAsync(StartupInfo startupInfo)
-   at Eco.Server.ApplicationHostedService.StartAsync(CancellationToken cancellationToken)
-   at Microsoft.Extensions.Hosting.Internal.Host.StartAsync(CancellationToken cancellationToken)
-   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
-   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.RunAsync(IHost host, CancellationToken token)
-   at Microsoft.Extensions.Hosting.HostingAbstractionsHostExtensions.Run(IHost host)
-   at Eco.Server.MainClass.Main(String[] args)
-System.ArgumentNullException: Value cannot be null. (Parameter 'key')
-   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
-   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
-   at Eco.Gameplay.Items.RecipeFamily.Initialize()
-   at Eco.ModKit.ModDataSync..ctor()
-   at Eco.ModKit.ModKitPlugin.<>c__DisplayClass31_0.<LoadModsData>b__0()
-   at System.Threading.Tasks.Task.InnerInvoke()
-   at System.Threading.Tasks.Task.<>c.<.cctor>b__274_0(Object obj)
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
---- End of stack trace from previous location where exception was thrown ---
-   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
-   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+Exception filling window for Verse.ImmediateWindow: System.MissingMethodException: void Verse.DebugActionAttribute..ctor(string,string)
+  at (wrapper managed-to-native) System.MonoCustomAttrs.GetCustomAttributesInternal(System.Reflection.ICustomAttributeProvider,System.Type,bool)
+  at System.MonoCustomAttrs.GetCustomAttributesBase (System.Reflection.ICustomAttributeProvider obj, System.Type attributeType, System.Boolean inheritedOnly) [0x00013] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.MonoCustomAttrs.GetCustomAttributes (System.Reflection.ICustomAttributeProvider obj, System.Type attributeType, System.Boolean inherit) [0x00037] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at System.Reflection.MonoMethod.GetCustomAttributes (System.Type attributeType, System.Boolean inherit) [0x00000] in <eae584ce26bc40229c1b1aa476bfa589>:0 
+  at Verse.GenAttribute.TryGetAttribute[T] (System.Reflection.MemberInfo memberInfo, T& customAttribute) [0x00000] in <d243303f714d4dc48680ccaecd2f594e>:0 
+  at Verse.Dialog_DebugActionsMenu..ctor () [0x0003e] in <d243303f714d4dc48680ccaecd2f594e>:0 
+  at Verse.DebugWindowsOpener.ToggleDebugActionsMenu () [0x0001c] in <d243303f714d4dc48680ccaecd2f594e>:0 
+  at (wrapper dynamic-method) Verse.DebugWindowsOpener.Verse.DebugWindowsOpener.DrawButtons_Patch0(Verse.DebugWindowsOpener)
+  at Verse.ImmediateWindow.DoWindowContents (UnityEngine.Rect inRect) [0x00000] in <d243303f714d4dc48680ccaecd2f594e>:0 
+  at Verse.Window.InnerWindowOnGUI (System.Int32 x) [0x001ce] in <d243303f714d4dc48680ccaecd2f594e>:0  
+(Filename: C:\buildslave\unity\build\Runtime/Export/Debug/Debug.bindings.h Line: 39)
